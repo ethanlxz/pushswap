@@ -6,7 +6,7 @@
 /*   By: etlaw <ethanlxz@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 17:26:19 by etlaw             #+#    #+#             */
-/*   Updated: 2023/06/14 22:13:09 by etlaw            ###   ########.fr       */
+/*   Updated: 2023/06/20 21:12:04 by etlaw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ typedef struct s_stack
 
 // main.c
 int		is_sorted(t_stack *stack);
-void	print_stack(t_stack *stack);
-// TESTING
 
 // get_input.c
 char	**get_crt_input(int ac, char **av);

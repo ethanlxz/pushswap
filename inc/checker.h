@@ -21,18 +21,8 @@
 typedef struct s_stack
 {
 	int				value;
-	int				index;
-	int				pos;
-	int				target_pos;
-	int				cost_a;
-	int				cost_b;
 	struct s_stack	*next;
 }	t_stack;
-
-// main.c
-int		is_sorted(t_stack *stack);
-void	print_stack(t_stack *stack);
-// TESTING
 
 // get_input.c
 char	**get_crt_input(int ac, char **av);
@@ -41,28 +31,10 @@ char	**get_crt_input(int ac, char **av);
 void	errormsg(char *msg);
 char	*ps_strjoin(char const *s1, char const *s2, char const *s3);
 void	free_arr(char **arr);
-int		unsign_int(int nb);
+int		ft_strcmp(const char *s1, const char *s2);
 
 // init.c
 void	fill_stack(char **input, t_stack **stack_a);
-int		count_stack(char **input);
-
-// tiny_sort.c
-void	tiny_sort(t_stack **stack);
-
-// bog_sort.c
-void	big_sort(t_stack **stack_a, t_stack **stack_b, int stack_size);
-
-// position.c
-int		get_lowest_index_pos(t_stack **stack);
-void	get_target_position(t_stack **a, t_stack **b);
-
-//cost.c
-void	do_cheapest_move(t_stack **stack_a, t_stack **stack_b);
-void	get_cost(t_stack **a, t_stack **b);
-
-//do_move.c
-void	do_move(t_stack **a, t_stack **b, int cost_a, int cost_b);
 
 // moves
 void	do_ra(t_stack **stack_a);
@@ -79,9 +51,9 @@ void	do_ss(t_stack **stack_a, t_stack **stack_b);
 
 // stack.c 
 t_stack	*get_stack_bottom(t_stack *stack);
-t_stack	*get_stack_before_bottom(t_stack *stack);
 t_stack	*stack_new(int value);
 void	stack_add_bottom(t_stack **stack, t_stack *new);
+t_stack	*get_stack_before_bottom(t_stack *stack);
 int		get_stack_size(t_stack *stack);
 
 #endif

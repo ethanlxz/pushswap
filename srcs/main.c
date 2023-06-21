@@ -6,7 +6,7 @@
 /*   By: etlaw <ethanlxz@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 17:26:02 by etlaw             #+#    #+#             */
-/*   Updated: 2023/06/15 19:18:18 by etlaw            ###   ########.fr       */
+/*   Updated: 2023/06/21 21:10:58 by etlaw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,22 +21,6 @@ int	is_sorted(t_stack *stack)
 		stack = stack->next;
 	}
 	return (1);
-}
-
-void	print_stack(t_stack *stack)
-{
-	int		i;
-	t_stack	*tmp;
-
-	i = 1;
-	tmp = stack;
-	while (stack)
-	{
-		ft_printf("%ith num is %i|\n", stack->index, stack->value);
-		stack = stack->next;
-		i++;
-	}
-	stack = tmp;
 }
 
 static void	sort(t_stack **stack_a, t_stack **stack_b, char **input)
