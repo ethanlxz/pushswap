@@ -6,7 +6,7 @@
 /*   By: etlaw <ethanlxz@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 21:17:45 by etlaw             #+#    #+#             */
-/*   Updated: 2023/06/21 22:45:56 by etlaw            ###   ########.fr       */
+/*   Updated: 2023/06/22 22:46:54 by etlaw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	rrr_or_die(t_stack **stack_a, t_stack **stack_b, char *str)
 	else if (!ft_strcmp(str, "rrr\n"))
 		do_rrr(stack_a, stack_b);
 	else
-		errormsg("Error\n");
+		errormsg("Error");
 }
 
 void	do_sort(t_stack **stack_a, t_stack **stack_b, char *str)
