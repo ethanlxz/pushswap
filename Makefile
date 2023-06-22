@@ -6,7 +6,7 @@
 #    By: etlaw <ethanlxz@gmail.com>                 +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/19 18:07:41 by etlaw             #+#    #+#              #
-#    Updated: 2023/06/17 01:16:12 by etlaw            ###   ########.fr        #
+#    Updated: 2023/06/22 21:57:33 by etlaw            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,17 +23,9 @@ BSRC_PATH	= ./bonus/**
 OBJ_PATH    = ./obj
 LIBFT_PATH	= ./libft
 
-# SRCS	= $(wildcard ./srcs/*.c)
-# SRCS	= $(wildcard $(SRC_PATH)/**.c)
-# SRCS	+= $(wildcard $(SRC_PATH)/*.c)
-# SRCS	= $(shell find ./srcs/ -name "*.c")
-# BSRCS	= $(shell find ./bonus/ -name "*.c")
 SRCS	= $(shell find $(SRC_PATH) -name "*.c")
 BSRCS	= $(shell find $(BSRC_PATH) -name "*.c")
-# BSRCS	= $(wildcard $(BSRC_PATH)/*.c)
 
-
-# OBJS	= $(patsubst %.c, $(OBJ_PATH)/%.o,$(notdir $(SRCS)))
 OBJS	= $(patsubst $(SRC_PATH)/%.c, $(OBJ_PATH)/%.o, $(SRCS))
 BOBS	= $(patsubst $(BSRC_PATH)/%.c, $(OBJ_PATH)/%.o, $(BSRCS))
 
@@ -52,9 +44,6 @@ $(BONUS)		:	$(BOBS)
 $(OBJ_PATH)/%.o	:	$(SRC_PATH)/%.c ./Makefile $(INCLUDES)
 					mkdir -p $(@D)
 					$(CC) $(CFLAGS) -I$(INCLUDES) -c $< -o $@
-
-# $(OBJ_PATH)		:
-# 					mkdir -p $(OBJ_PATH)	
 
 clean			:
 					$(MAKE) -C $(LIBFT_PATH) $@
