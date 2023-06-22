@@ -6,7 +6,7 @@
 /*   By: etlaw <ethanlxz@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 17:26:02 by etlaw             #+#    #+#             */
-/*   Updated: 2023/06/21 21:10:58 by etlaw            ###   ########.fr       */
+/*   Updated: 2023/06/22 22:02:06 by etlaw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,5 @@ int	main(int ac, char **av)
 		fill_stack(input, &stack_a);
 		sort(&stack_a, &stack_b, input);
 	}
-	else
-		ft_printf("\033[0;31mError : Too less arguments\n\033[42m");
 	return (0);
 }

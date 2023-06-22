@@ -6,7 +6,7 @@
 /*   By: etlaw <ethanlxz@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 19:23:49 by etlaw             #+#    #+#             */
-/*   Updated: 2023/06/14 21:58:24 by etlaw            ###   ########.fr       */
+/*   Updated: 2023/06/22 22:34:24 by etlaw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static void	push_all_save_three(t_stack **stack_a, t_stack **stack_b, int size)
 			pushed++;
 		}
 		else
-			do_sa(stack_a);
+			do_ra(stack_a);
 		i++;
 	}
 	while (size - pushed > 3)
