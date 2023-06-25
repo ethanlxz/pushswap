@@ -6,7 +6,7 @@
 /*   By: etlaw <ethanlxz@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 21:17:45 by etlaw             #+#    #+#             */
-/*   Updated: 2023/06/22 22:46:54 by etlaw            ###   ########.fr       */
+/*   Updated: 2023/06/25 20:48:06 by etlaw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 void	check_sorted(t_stack *stack)
 {
+	if (stack == NULL)
+	{
+		write(1, "KO\n", 3);
+		return ;
+	}
 	while (stack->next != NULL)
 	{
 		if (stack->value > stack->next->value)
